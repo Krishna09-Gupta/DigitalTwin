@@ -1,0 +1,223 @@
+{
+  "_meta": {
+    "description": "Dummy/mock dataset for the Antarctica Digital Twin - Mission Control project. Mirrors the tables in database/schema.sql. IDs are stable strings here so you can wire up a mock API or a Postgres seed script without worrying about auto-increment order. Passwords shown are PLAINTEXT for dummy/demo purposes only - your real users table stores password_hash (bcrypt), never plaintext.",
+    "generated_for": "Krishna09-Gupta/DigitalTwin"
+  },
+
+  "stations": [
+    {
+      "id": 1,
+      "code": "BHR",
+      "name": "Bharati",
+      "description": "Bharati Antarctic Research Station",
+      "active": true,
+      "created_at": "2026-01-05T06:00:00Z"
+    },
+    {
+      "id": 2,
+      "code": "MTR",
+      "name": "Maitri",
+      "description": "Maitri Antarctic Research Station",
+      "active": true,
+      "created_at": "2026-01-05T06:00:00Z"
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "username": "station_commander",
+      "password": "Commander@NCPOR2026",
+      "role": "admin",
+      "station_id": null,
+      "security_question": "Headquarters verification phrase?",
+      "security_answer": "goa",
+      "must_change_password": false,
+      "active": true,
+      "created_at": "2026-01-05T06:00:00Z",
+      "updated_at": "2026-01-05T06:00:00Z"
+    },
+    {
+      "id": 2,
+      "username": "dr_sharma",
+      "password": "Bharati#Scientist2026",
+      "role": "visiting_scientist",
+      "station_id": 1,
+      "security_question": "Assigned research vessel?",
+      "security_answer": "vasudha",
+      "must_change_password": true,
+      "active": true,
+      "created_at": "2026-01-06T09:30:00Z",
+      "updated_at": "2026-01-06T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "username": "dr_maitri_lead",
+      "password": "Maitri#Scientist2026",
+      "role": "visiting_scientist",
+      "station_id": 2,
+      "security_question": "Assigned research vessel?",
+      "security_answer": "akademik",
+      "must_change_password": true,
+      "active": true,
+      "created_at": "2026-01-06T09:35:00Z",
+      "updated_at": "2026-01-06T09:35:00Z"
+    },
+    {
+      "id": 4,
+      "username": "dr_verma",
+      "password": "Bharati#Scientist2027",
+      "role": "visiting_scientist",
+      "station_id": 1,
+      "security_question": "Assigned research vessel?",
+      "security_answer": "sagar",
+      "must_change_password": false,
+      "active": false,
+      "created_at": "2026-02-01T11:00:00Z",
+      "updated_at": "2026-03-10T08:15:00Z"
+    }
+  ],
+
+  "telemetry_metrics": [
+    { "id": 1, "station_id": 1, "domain": "Energy", "metric_name": "Solar Array Grid Output", "unit": "kW", "current_value": 45.2, "min_value": 5, "max_value": 60, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 2, "station_id": 1, "domain": "Energy", "metric_name": "Emergency Fuel Reserve Level", "unit": "%", "current_value": 84, "min_value": 0, "max_value": 100, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 3, "station_id": 1, "domain": "Life Support", "metric_name": "Habitat Oxygen Saturation", "unit": "%", "current_value": 20.9, "min_value": 18, "max_value": 22, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 4, "station_id": 1, "domain": "Weather", "metric_name": "External Ambient Temperature", "unit": "°C", "current_value": -32, "min_value": -70, "max_value": 5, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 5, "station_id": 1, "domain": "Weather", "metric_name": "Perimeter Wind Velocity", "unit": "knots", "current_value": 28, "min_value": 0, "max_value": 80, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 6, "station_id": 1, "domain": "Environment", "metric_name": "Relative Humidity", "unit": "%", "current_value": 78, "min_value": 0, "max_value": 100, "is_overridden": true, "updated_at": "2026-09-12T04:05:00Z" },
+
+    { "id": 7, "station_id": 2, "domain": "Energy", "metric_name": "Solar Array Grid Output", "unit": "kW", "current_value": 38.7, "min_value": 5, "max_value": 60, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 8, "station_id": 2, "domain": "Energy", "metric_name": "Emergency Fuel Reserve Level", "unit": "%", "current_value": 91, "min_value": 0, "max_value": 100, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 9, "station_id": 2, "domain": "Life Support", "metric_name": "Habitat Oxygen Saturation", "unit": "%", "current_value": 21.0, "min_value": 18, "max_value": 22, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 10, "station_id": 2, "domain": "Weather", "metric_name": "External Ambient Temperature", "unit": "°C", "current_value": -18, "min_value": -70, "max_value": 5, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 11, "station_id": 2, "domain": "Weather", "metric_name": "Perimeter Wind Velocity", "unit": "knots", "current_value": 14, "min_value": 0, "max_value": 80, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" },
+    { "id": 12, "station_id": 2, "domain": "Environment", "metric_name": "Relative Humidity", "unit": "%", "current_value": 73, "min_value": 0, "max_value": 100, "is_overridden": false, "updated_at": "2026-09-12T04:10:00Z" }
+  ],
+
+  "simulation_profiles": [
+    { "id": 1, "station_id": 1, "metric_name": "Solar Array Grid Output", "step": 1, "min_value": 5, "max_value": 60 },
+    { "id": 2, "station_id": 1, "metric_name": "Emergency Fuel Reserve Level", "step": 1, "min_value": 0, "max_value": 100 },
+    { "id": 3, "station_id": 1, "metric_name": "Habitat Oxygen Saturation", "step": 0.1, "min_value": 18, "max_value": 22 },
+    { "id": 4, "station_id": 1, "metric_name": "External Ambient Temperature", "step": 1, "min_value": -70, "max_value": 5 },
+    { "id": 5, "station_id": 1, "metric_name": "Perimeter Wind Velocity", "step": 1, "min_value": 0, "max_value": 80 },
+    { "id": 6, "station_id": 1, "metric_name": "Relative Humidity", "step": 2, "min_value": 0, "max_value": 100 },
+
+    { "id": 7, "station_id": 2, "metric_name": "Solar Array Grid Output", "step": 1, "min_value": 5, "max_value": 60 },
+    { "id": 8, "station_id": 2, "metric_name": "Emergency Fuel Reserve Level", "step": 1, "min_value": 0, "max_value": 100 },
+    { "id": 9, "station_id": 2, "metric_name": "Habitat Oxygen Saturation", "step": 0.1, "min_value": 18, "max_value": 22 },
+    { "id": 10, "station_id": 2, "metric_name": "External Ambient Temperature", "step": 1, "min_value": -70, "max_value": 5 },
+    { "id": 11, "station_id": 2, "metric_name": "Perimeter Wind Velocity", "step": 1, "min_value": 0, "max_value": 80 },
+    { "id": 12, "station_id": 2, "metric_name": "Relative Humidity", "step": 2, "min_value": 0, "max_value": 100 }
+  ],
+
+  "station_logistics": [
+    { "id": 1, "station_id": 1, "category": "Energy", "item_key": "diesel_fuel", "item_name": "Heating / Diesel Fuel", "unit": "L", "capacity": 12000, "current_quantity": 6800, "reorder_threshold": 3000, "status": "NOMINAL", "storage_location": "Fuel Farm", "eta": "Next scheduled cargo", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 2, "station_id": 1, "category": "Energy", "item_key": "emergency_fuel", "item_name": "Emergency Fuel Reserve", "unit": "%", "capacity": 100, "current_quantity": 84, "reorder_threshold": 30, "status": "NOMINAL", "storage_location": "Secure Fuel Store", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 3, "station_id": 1, "category": "Water", "item_key": "potable_water", "item_name": "Potable Water", "unit": "L", "capacity": 10000, "current_quantity": 7800, "reorder_threshold": 3000, "status": "NOMINAL", "storage_location": "Water Module", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 4, "station_id": 1, "category": "Food", "item_key": "food_stores", "item_name": "Food Stores", "unit": "days", "capacity": 120, "current_quantity": 71, "reorder_threshold": 30, "status": "ADEQUATE", "storage_location": "Main Stores", "eta": "Next resupply: 18 days", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 5, "station_id": 1, "category": "Medical", "item_key": "medical_supplies", "item_name": "Medical Supplies", "unit": "%", "capacity": 100, "current_quantity": 88, "reorder_threshold": 45, "status": "NOMINAL", "storage_location": "Medical Unit", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 6, "station_id": 1, "category": "Life Support", "item_key": "oxygen_cylinders", "item_name": "Oxygen Cylinders", "unit": "cyl", "capacity": 60, "current_quantity": 46, "reorder_threshold": 20, "status": "NOMINAL", "storage_location": "Life Support Store", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 7, "station_id": 1, "category": "Maintenance", "item_key": "critical_spares", "item_name": "Critical Spare Parts", "unit": "%", "capacity": 100, "current_quantity": 73, "reorder_threshold": 40, "status": "ADEQUATE", "storage_location": "Maintenance Bay", "eta": "Cargo manifest pending", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 8, "station_id": 1, "category": "Power", "item_key": "generator_readiness", "item_name": "Emergency Generator Readiness", "unit": "%", "capacity": 100, "current_quantity": 96, "reorder_threshold": 75, "status": "NOMINAL", "storage_location": "Power House", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 9, "station_id": 1, "category": "Power", "item_key": "battery_backup", "item_name": "Battery Backup", "unit": "%", "capacity": 100, "current_quantity": 79, "reorder_threshold": 40, "status": "NOMINAL", "storage_location": "Power House", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 10, "station_id": 1, "category": "Research", "item_key": "research_consumables", "item_name": "Research Consumables", "unit": "%", "capacity": 100, "current_quantity": 68, "reorder_threshold": 35, "status": "ADEQUATE", "storage_location": "Research Store", "eta": "Resupply: 26 days", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 11, "station_id": 1, "category": "Waste", "item_key": "waste_capacity", "item_name": "Waste Storage Capacity", "unit": "%", "capacity": 100, "current_quantity": 24, "reorder_threshold": 80, "status": "NOMINAL", "storage_location": "Waste Module", "eta": "Pickup planned", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 12, "station_id": 1, "category": "Mobility", "item_key": "vehicle_readiness", "item_name": "Cargo / Vehicle Readiness", "unit": "%", "capacity": 100, "current_quantity": 91, "reorder_threshold": 70, "status": "NOMINAL", "storage_location": "Vehicle Bay", "eta": "2 vehicles available", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 13, "station_id": 1, "category": "Communications", "item_key": "satcom_readiness", "item_name": "Satellite Communication Equipment", "unit": "%", "capacity": 100, "current_quantity": 93, "reorder_threshold": 70, "status": "NOMINAL", "storage_location": "Comms Room", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 14, "station_id": 1, "category": "Safety", "item_key": "ppe_stock", "item_name": "PPE / Field Safety Stock", "unit": "%", "capacity": 100, "current_quantity": 86, "reorder_threshold": 50, "status": "NOMINAL", "storage_location": "Safety Store", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+
+    { "id": 15, "station_id": 2, "category": "Energy", "item_key": "diesel_fuel", "item_name": "Heating / Diesel Fuel", "unit": "L", "capacity": 15000, "current_quantity": 10800, "reorder_threshold": 4000, "status": "NOMINAL", "storage_location": "Fuel Farm", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 16, "station_id": 2, "category": "Energy", "item_key": "emergency_fuel", "item_name": "Emergency Fuel Reserve", "unit": "%", "capacity": 100, "current_quantity": 91, "reorder_threshold": 30, "status": "NOMINAL", "storage_location": "Secure Fuel Store", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 17, "station_id": 2, "category": "Water", "item_key": "potable_water", "item_name": "Potable Water", "unit": "L", "capacity": 12000, "current_quantity": 9200, "reorder_threshold": 3500, "status": "NOMINAL", "storage_location": "Water Module", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 18, "station_id": 2, "category": "Food", "item_key": "food_stores", "item_name": "Food Stores", "unit": "days", "capacity": 150, "current_quantity": 96, "reorder_threshold": 35, "status": "NOMINAL", "storage_location": "Main Stores", "eta": "Next resupply: 31 days", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 19, "station_id": 2, "category": "Medical", "item_key": "medical_supplies", "item_name": "Medical Supplies", "unit": "%", "capacity": 100, "current_quantity": 82, "reorder_threshold": 45, "status": "NOMINAL", "storage_location": "Medical Unit", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 20, "station_id": 2, "category": "Life Support", "item_key": "oxygen_cylinders", "item_name": "Oxygen Cylinders", "unit": "cyl", "capacity": 70, "current_quantity": 55, "reorder_threshold": 20, "status": "NOMINAL", "storage_location": "Life Support Store", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 21, "station_id": 2, "category": "Maintenance", "item_key": "critical_spares", "item_name": "Critical Spare Parts", "unit": "%", "capacity": 100, "current_quantity": 61, "reorder_threshold": 40, "status": "ADEQUATE", "storage_location": "Maintenance Bay", "eta": "Cargo manifest pending", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 22, "station_id": 2, "category": "Power", "item_key": "generator_readiness", "item_name": "Emergency Generator Readiness", "unit": "%", "capacity": 100, "current_quantity": 94, "reorder_threshold": 75, "status": "NOMINAL", "storage_location": "Power House", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 23, "station_id": 2, "category": "Power", "item_key": "battery_backup", "item_name": "Battery Backup", "unit": "%", "capacity": 100, "current_quantity": 84, "reorder_threshold": 40, "status": "NOMINAL", "storage_location": "Power House", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 24, "station_id": 2, "category": "Research", "item_key": "research_consumables", "item_name": "Research Consumables", "unit": "%", "capacity": 100, "current_quantity": 76, "reorder_threshold": 35, "status": "NOMINAL", "storage_location": "Research Store", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 25, "station_id": 2, "category": "Waste", "item_key": "waste_capacity", "item_name": "Waste Storage Capacity", "unit": "%", "capacity": 100, "current_quantity": 31, "reorder_threshold": 80, "status": "NOMINAL", "storage_location": "Waste Module", "eta": "Pickup planned", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 26, "station_id": 2, "category": "Mobility", "item_key": "vehicle_readiness", "item_name": "Cargo / Vehicle Readiness", "unit": "%", "capacity": 100, "current_quantity": 87, "reorder_threshold": 70, "status": "NOMINAL", "storage_location": "Vehicle Bay", "eta": "3 vehicles available", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 27, "station_id": 2, "category": "Communications", "item_key": "satcom_readiness", "item_name": "Satellite Communication Equipment", "unit": "%", "capacity": 100, "current_quantity": 96, "reorder_threshold": 70, "status": "NOMINAL", "storage_location": "Comms Room", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" },
+    { "id": 28, "station_id": 2, "category": "Safety", "item_key": "ppe_stock", "item_name": "PPE / Field Safety Stock", "unit": "%", "capacity": 100, "current_quantity": 90, "reorder_threshold": 50, "status": "NOMINAL", "storage_location": "Safety Store", "eta": "On station", "updated_at": "2026-09-10T00:00:00Z" }
+  ],
+
+  "condition_requests": [
+    {
+      "id": 1,
+      "station_id": 1,
+      "metric_id": 4,
+      "requested_by": 2,
+      "proposed_value": -28,
+      "justification": "Field team returning from glacier survey needs habitat pre-warmed above current external temperature setpoint.",
+      "status": "PENDING",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "created_at": "2026-09-11T14:20:00Z"
+    },
+    {
+      "id": 2,
+      "station_id": 2,
+      "metric_id": 9,
+      "requested_by": 3,
+      "proposed_value": 21.3,
+      "justification": "Increase habitat oxygen saturation slightly ahead of planned high-altitude simulation research session.",
+      "status": "APPROVED",
+      "reviewed_by": 1,
+      "reviewed_at": "2026-09-09T10:05:00Z",
+      "created_at": "2026-09-08T16:40:00Z"
+    },
+    {
+      "id": 3,
+      "station_id": 1,
+      "metric_id": 6,
+      "requested_by": 2,
+      "proposed_value": 65,
+      "justification": "Reduce relative humidity to protect sensitive lab equipment during instrument calibration.",
+      "status": "REJECTED",
+      "reviewed_by": 1,
+      "reviewed_at": "2026-09-07T09:00:00Z",
+      "created_at": "2026-09-06T12:15:00Z"
+    }
+  ],
+
+  "emergency_events": [
+    {
+      "id": 1,
+      "station_id": 1,
+      "metric_id": 5,
+      "triggered_by": 2,
+      "resolved_by": 1,
+      "reason": "Sudden katabatic wind spike exceeded safe perimeter threshold during outdoor maintenance work.",
+      "status": "RESOLVED",
+      "previous_value": 28,
+      "created_at": "2026-09-04T03:22:00Z",
+      "resolved_at": "2026-09-04T04:10:00Z"
+    },
+    {
+      "id": 2,
+      "station_id": 2,
+      "metric_id": 8,
+      "triggered_by": 3,
+      "resolved_by": null,
+      "reason": "Unexpected drop flagged in emergency fuel reserve monitoring; verifying sensor accuracy before resupply request.",
+      "status": "ACTIVE",
+      "previous_value": 91,
+      "created_at": "2026-09-12T02:47:00Z",
+      "resolved_at": null
+    }
+  ],
+
+  "audit_logs": [
+    { "id": 1, "actor_user_id": 1, "action": "LOGIN_SUCCESS", "entity_type": "user", "entity_id": "1", "station_id": null, "details": { "username": "station_commander" }, "ip_address": "10.0.4.12", "created_at": "2026-09-12T03:58:00Z" },
+    { "id": 2, "actor_user_id": 2, "action": "LOGIN_SUCCESS", "entity_type": "user", "entity_id": "2", "station_id": 1, "details": { "username": "dr_sharma" }, "ip_address": "10.0.4.44", "created_at": "2026-09-12T04:02:00Z" },
+    { "id": 3, "actor_user_id": 2, "action": "CONDITION_REQUEST_CREATED", "entity_type": "condition_request", "entity_id": "1", "station_id": 1, "details": { "metric_id": 4, "proposed_value": -28 }, "ip_address": "10.0.4.44", "created_at": "2026-09-11T14:20:00Z" },
+    { "id": 4, "actor_user_id": 1, "action": "CONDITION_REQUEST_APPROVED", "entity_type": "condition_request", "entity_id": "2", "station_id": 2, "details": { "metric_id": 9, "proposed_value": 21.3 }, "ip_address": "10.0.4.12", "created_at": "2026-09-09T10:05:00Z" },
+    { "id": 5, "actor_user_id": 1, "action": "CONDITION_REQUEST_REJECTED", "entity_type": "condition_request", "entity_id": "3", "station_id": 1, "details": { "metric_id": 6, "reason": "Would push humidity outside operational tolerance" }, "ip_address": "10.0.4.12", "created_at": "2026-09-07T09:00:00Z" },
+    { "id": 6, "actor_user_id": 2, "action": "EMERGENCY_OVERRIDE_TRIGGERED", "entity_type": "emergency_event", "entity_id": "1", "station_id": 1, "details": { "metric_id": 5, "previous_value": 28 }, "ip_address": "10.0.4.44", "created_at": "2026-09-04T03:22:00Z" },
+    { "id": 7, "actor_user_id": 1, "action": "EMERGENCY_ROLLBACK", "entity_type": "emergency_event", "entity_id": "1", "station_id": 1, "details": { "restored_value": 28 }, "ip_address": "10.0.4.12", "created_at": "2026-09-04T04:10:00Z" },
+    { "id": 8, "actor_user_id": 1, "action": "USER_CREATED", "entity_type": "user", "entity_id": "4", "station_id": 1, "details": { "username": "dr_verma", "role": "visiting_scientist" }, "ip_address": "10.0.4.12", "created_at": "2026-02-01T11:00:00Z" },
+    { "id": 9, "actor_user_id": 1, "action": "USER_DEACTIVATED", "entity_type": "user", "entity_id": "4", "station_id": 1, "details": { "username": "dr_verma", "reason": "End of field rotation" }, "ip_address": "10.0.4.12", "created_at": "2026-03-10T08:15:00Z" },
+    { "id": 10, "actor_user_id": 3, "action": "EMERGENCY_OVERRIDE_TRIGGERED", "entity_type": "emergency_event", "entity_id": "2", "station_id": 2, "details": { "metric_id": 8, "previous_value": 91 }, "ip_address": "10.0.7.19", "created_at": "2026-09-12T02:47:00Z" }
+  ]
+}
